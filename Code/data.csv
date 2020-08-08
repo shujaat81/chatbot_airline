@@ -1,0 +1,43 @@
+﻿patterns,tag
+Hi,
+How are you,greeting
+Is anyone there?,greeting
+Hello,greeting
+Good day,greeting
+hola,greeting
+anyone there?,greeting
+are you there?,greeting
+Bye,goodbye
+See you later,goodbye
+Goodbye,goodbye
+fine!By,goodbye
+see you later,goodbye
+By,goodbye
+Thanks for help,goodbye
+Have a good day,goodbye
+Bye Bye,goodbye
+Bye Thank you for information,goodbye
+Thanks,thanks
+Thank you,thanks
+That's helpful,thanks
+What hours are you open?,hours
+What are your hours?,hours
+When are you open?,hours
+What's your availability?,hours
+Which mopeds do you have?,mopeds
+What kinds of mopeds are there?,mopeds
+What do you rent?,mopeds
+Do you take credit cards?,payments
+Do you accept Mastercard?,payments
+Are you cash only?,payments
+Are you open today?,opentoday
+When do you open today?,opentoday
+What are your hours today?,opentoday
+Can we rent a moped?,rental
+I'd like to rent a moped,rental
+How does this work?,rental
+today,today
+revenue,revenue
+Need to know the revenue,revenue
+Whats the revenue,revenue
+Interested in knowing the revenue,revenue

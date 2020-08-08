@@ -1,3 +1,21 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="menu-content" when="xs" [disabled]="true" (ionSplitPaneVisible)="onSplitPaneVisible(event)">
+    <ion-menu contentId="menu-content" menuId="menu-content" side="end" type="overlay">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Ashis Kumar</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        
+
+        <ion-list>
+          <ion-item (click)="toggleMenu()" [routerLink]="['']">
+            <ion-label>Sign out</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="menu-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>

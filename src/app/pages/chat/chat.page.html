@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon ios="ios-search" md="md-search"></ion-icon>
+        
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Jupiter</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="6" style="padding: 5px !important;">
+      <button size="6" (click)="history=true;chat=false;hiscolor='#12d7e4';chatcolor='#ebebeb'" [ngStyle]="{'background':hiscolor}" class="buttonstyle"  >
+        Chat History
+      </button>
+    </ion-col>
+    <ion-col size="6" style="padding: 5px !important;">
+      <button size="6" (click)="history=false;chat=true;chatcolor='#12d7e4';hiscolor='#ebebeb'" [ngStyle]="{'background':chatcolor}" class="buttonstyle">
+        New Chat
+      </button>
+
+    </ion-col>
+  </ion-row>
+
+
+  <div *ngIf="history">
+    <table  style="width:100%; background: white;">
+      <tr >
+        <td>Unique Id- #$5657 </td>
+        
+        <td><ion-icon ios="ios-thumbs-up" md="md-thumbs-up" style="color: green;"></ion-icon></td>
+      </tr>
+      <tr>
+        <td>Unique Id- #$5658</td>
+        
+        <td> <ion-icon ios="ios-thumbs-down" md="md-thumbs-down" style="color: red;"></ion-icon>
+        </td>
+      </tr>
+      <tr>
+        <td>Unique Id- #$5659</td>
+        
+        <td> <ion-icon ios="ios-eye" md="md-eye" style="color: blue;"></ion-icon></td>
+      </tr>
+    </table>
+  </div>
+
+  <div *ngIf="chat" style="background: white;" >
+    <div style="margin: 5px;" >
+      <ion-title  class="ion-text-center" style="color:darkgray;">Chat</ion-title>
+    </div>
+    <ion-grid >
+      <ion-row *ngFor="let message of messages">
+        <ion-col size="9" *ngIf="currentUser !==message.user" class="message other-message">
+          <b>{{message.user}}</b><br>
+          <span>{{message.msg}}</span>
+          <div class="time" text-right><br>
+          {{message.createdAt | date:'short'}}</div>
+        </ion-col>
+    
+        <ion-col offset="3"  size="9" *ngIf="currentUser ===message.user" class="message my-message">
+          <b>{{message.user}}</b><br>
+          <span>{{message.msg}}</span>
+          <div class="time" text-right><br>
+          {{message.createdAt | date:'short'}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    <ion-footer >
+      <ion-toolbar color="light">
+        <ion-row align-items-center no-padding>
+          <ion-col size="10">
+            <textarea autosize maxRows="4" [(ngModel)]="newMsg" class="message-input">
+            </textarea>
+          </ion-col>
+          <ion-col size="2">
+            <ion-button expand="block" fill="clear" color="secondary" [disabled]="newNsg ===''"class="msg-btn" (click)="sendMessage()">
+              <ion-icon ios="ios-send" md="md-send"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-toolbar>
+    </ion-footer>
+  </div>
+</ion-content>

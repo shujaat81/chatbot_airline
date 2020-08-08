@@ -1,0 +1,31 @@
+<ion-header>
+  
+</ion-header>
+
+<ion-content  class="ion-text-center">
+  <app-logo></app-logo>
+  <form style="padding: 0% 5%;">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">User Name</ion-label>
+        <ion-input type='text' name="username" id="username" [(ngModel)]="postData.username" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input type='password' name="password" id="password" [(ngModel)]="postData.password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-item lines='none'>
+      <ion-checkbox color="secondary" checked slot="start"></ion-checkbox>
+      <ion-label>Remember me</ion-label>
+    </ion-item >
+
+    
+    <ion-button size="default" color="secondary" (click)="navigateToFaresPage()">Sign In</ion-button>
+    <ion-button size="default" color="secondary" button (click)="clearInput()">Reset</ion-button>
+  </form>
+</ion-content>
+
+

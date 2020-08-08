@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+<form>
+  method=POST action="{{ url_for('market') }}">
+  POS:<br>
+  <input type="text" name="POS"><br>
+  od:<br>
+  <input type="text" name="od"><br>
+  compartement:<br>
+  <input><br>
+  departure_from:<br>
+  <input><br>
+  departure_to:<br>
+  <input><br><br>
+  <input type="submit" value="Submit">
+  
+</form>

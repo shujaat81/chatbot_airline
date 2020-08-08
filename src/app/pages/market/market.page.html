@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon ios="ios-search" md="md-search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Jupiter</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="marketform" >
+    <form class="marketinput" >
+      <label for="pos">POS</label><br>
+      <input id="pos" type="text" list="poslist">
+      <datalist id="poslist">                                             
+          <option value="java" >java  </option>                          
+          <option value="Sql">Sql</option>
+          <option value="Node">Node</option>
+          <option value="Angular" selected>Angular</option>               
+          <option value="React">React</option>
+      </datalist><br>
+      <label for="origin">ORIGIN</label><br>
+      <input id="origin" type="text" list="orglist">
+      <datalist id="orglist">                                             
+          <option value="java" >java  </option>                          
+          <option value="Sql">Sql</option>
+          <option value="Node">Node</option>
+          <option value="Angular" selected>Angular</option>               
+          <option value="React">React</option>
+      </datalist><br>
+      <label for="destnation">DESTINATION</label> <br>
+      <input id="destnation" type="text" list="destlist">
+      <datalist id="destlist">                                             
+          <option value="java" >java  </option>                          
+          <option value="Sql">Sql</option>
+          <option value="Node">Node</option>
+          <option value="Angular" selected>Angular</option>               
+          <option value="React">React</option>
+      </datalist><br>
+      <label for="compartment">COMPARTMENT</label><br>
+      <input id="compartment" type="text" list="complist">
+      <datalist id="complist">                                             
+          <option value="java" >java  </option>                          
+          <option value="Sql">Sql</option>
+          <option value="Node">Node</option>
+          <option value="Angular" selected>Angular</option>               
+          <option value="React">React</option>
+      </datalist><br>
+      <label for="departurefrom">DEPARTURE FROM</label><br>
+      <input type="date" name="departurefrom" id="departurefrom"><br>
+      <label for="departureto">DEPARTURE TO</label><br>
+      <input type="date" name="departureto" id="departureto"><br>
+      
+
+      <ion-button expand="block">Click</ion-button>
+    </form>
+  </div>
+
+  <div>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+
+  </div>
+</ion-content>
